@@ -348,8 +348,12 @@ footer p {
     position: absolute;
     right: 25px;
     top: 25px;
+    color: #000;
   }
   .navbar #mobiledrop:active {
+    color: black;
+  }
+  .navbar #mobiledrop:visited {
     color: black;
   }
 

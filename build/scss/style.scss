@@ -364,7 +364,11 @@ footer{
             position: absolute;
             right: 25px;
             top: 25px;
+            color: #000;
             &:active{
+                color: black;
+            }
+            &:visited{
                 color: black;
             }
             }
