@@ -202,7 +202,6 @@ body{
     }
 }
 
-
 .sectiontitle{
     margin-top: 150px;
     text-align: center;
@@ -266,15 +265,6 @@ body{
     z-index: 999;
 }
 
-.ribbon::before,
-.ribbon::after {
-    position: absolute;
-    z-index: -10;
-    content: '';
-    display: none;
-    border: 5px solid #900a0a;
-}
-
 .ribbon span {
     position: absolute;
     display: block;
@@ -293,19 +283,7 @@ body{
     top: 0px;
     right: 0px;
 }
-.ribbon-top-right::before,
-.ribbon-top-right::after {
-    border-top-color: transparent;
-    border-right-color: transparent;
-}
-.ribbon-top-right::before {
-    top: 0;
-    left: 0;
-}
-.ribbon-top-right::after {
-    bottom: 0px;
-    right: 10px;
-}
+
 .ribbon-top-right span {
     left: -25px;
     top: 30px;
