@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tesla</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <video autoplay loop autoplay="true" id="myVideo">
+        <source src="img/lifeonmars.mp4">
+    </video>
+    <nav class="navbar" id="navbar">
+        <img src="img/logo.png" id="logo" alt="tesla_logo">
+        <div class="links" id="links">
+            <a href="#" class="active">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">VALUES</a>
+            <div class="dropdown">
+                <button class="dropbtn" id="dropbtn">CAR MODELS 
+                    <i class="fas fa-chevron-circle-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="#">Model S <img class="minicar" src="img/models.png" alt=""></a>
+                <a href="#">Model 3 <img class="minicar" src="img/model3.png" alt=""></a>
+                <a href="#">Model Y <img class="smallcar" src="img/modely.png" alt=""></a>
+                <a href="#">Model X <img class="smallcar" src="img/modelx.png" alt=""></a>
+                <a href="#">Roadster <img class="minicar" src="img/roadster.png" alt=""></a>
+                </div>
+            </div> 
+            <a href="#">SHOP</a>
+            <a href="#">CONTACT</a>
+        </div>
+        <a href="#" id="mobiledrop"><i class="fas fa-bars"></i></a>
+    </nav>
+	<section class="slider fade">
+        <div class="image">
+            <img class="img" src="img/slide1.jpg"/>
+            <div class="content">
+                <h2>Speed</h2>
+                <p>Roadster goes 0-60mph and has top speed of +250mph.</p> 
+            </div>
+        </div>
+        <div class="image">
+            <img class="img" src="img/slide2.jpg"/>
+            <div class="content">
+                <h2>Diversity</h2>
+                <p>Tesla has different vehicles for different purposes.</p> 
+            </div>
+        </div>
+        <div class="image">
+            <img class="img" src="img/slide3.jpg"/>
+            <div class="content">
+                <h2>Range</h2>
+                <p>Average mile range of Tesla vehicles with full batery is 620 miles.</p> 
+            </div>
+         
+        </div>
+        <div class="image">
+            <img class="img" src="img/slide4.jpg"/>
+            <div class="content">
+                <h2>Elegance</h2>
+                <p>Leather seats and large LCD adds five-star rating for interior.</p> 
+            </div>
+        </div>
+        <div class="image">
+            <img class="img" src="img/slide5.jpg"/>
+            <div class="content">
+                <h2>Presentation</h2>
+                <p>Tesla's CEO Elon Musk presents first Model 3 ever.</p> 
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <h1 class="sectiontitle">News:</h1>
+        <div class="row1">
+            <div class="side1">
+                <a href="#">
+                    <div class="newsimg" id="news1">
+                        <div class="ribbon ribbon-top-right"><span>NEW</span></div>
+                        <h2 class="newstitle">Tesla launches Roadster in space.</h2>
+                    </div>
+                </a>   
+            </div>
+            <div class="main1">
+                <a href="#">
+                    <div class="newsimg" id="news2">
+                        <h2 class="newstitle">New interior design on the way.</h2>
+                    </div>
+                </a>  
+            </div>
+        </div>
+        <div class="row2">
+            <div class="side2">
+                <a href="#">
+                    <div class="newsimg" id="news3">
+                        <h2 class="newstitle">Tesla's autopilot system on test.</h2>
+                    </div>
+                </a>  
+            </div>
+            <div class="main2">
+                <a href="#">
+                    <div class="newsimg" id="news4">
+                        <h2 class="newstitle">Crash avoid system new upgrade.</h2>
+                    </div>
+                </a>  
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>	&#9400; Copyright</p>
+    </footer>
+    <a href="#navbar" id="gototop"><i class="fas fa-arrow-alt-circle-up"></i></a>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
