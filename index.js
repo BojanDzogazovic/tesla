@@ -8,10 +8,20 @@
 
 }; 
  
+//video start/loop
+let videoBg = document.getElementById("myVideo");
+
 window.onload = function(){
-   let videoBg = document.getElementById("myVideo");
   videoBg.play();
-}
+};
+
+/* function loopVideo(){
+  videoBg.currentTime = 0.1; 
+  videoBg.play();
+  }
+
+videoBg.addEventListener('ended', loopVideo, false);
+ */
 
 //slick slider
 $('.fade').slick({
@@ -38,8 +48,8 @@ document.getElementById("mobiledrop").addEventListener("click", function(){
     }
 });
 
+
 //smooth scrool
-//smooth scroll
 $(document).ready(function(){
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
