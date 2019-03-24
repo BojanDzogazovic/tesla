@@ -230,7 +230,7 @@ body {
 
 .performance {
   opacity: 0;
-  animation: 10s ease 10s showText;
+  animation: 5s ease 10s showText;
   animation-fill-mode: forwards;
   padding: 60px;
   display: flex;
@@ -362,7 +362,7 @@ body {
   height: 100%;
   display: block;
   background-color: #CF0823;
-  width: 5px;
+  width: 8px;
   top: 0;
   left: 50%;
   z-index: 3;
