@@ -12,52 +12,98 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <video autoplay loop id="myVideo">
-        <source src="img/lifeonmars.mp4" type="video/mp4">
-     <!--    <source src="img/lifeonmars.webm" type="video/webm"> -->
-    </video>
-    <nav class="navbar" id="navbar">
-        <img src="img/logo.png" id="logo" alt="tesla_logo">
-        <div class="links" id="links">
-            <a href="#" class="active">HOME</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">VALUES</a>
-            <div class="dropdown">
-                <button class="dropbtn" id="dropbtn">CAR MODELS 
-                    <i class="fas fa-chevron-circle-down"></i>
-                </button>
-                <div class="dropdown-content">
-                <a href="#">Model S <img class="minicar" src="img/models.png" alt=""></a>
-                <a href="#">Model 3 <img class="minicar" src="img/model3.png" alt=""></a>
-                <a href="#">Model Y <img class="smallcar" src="img/modely.png" alt=""></a>
-                <a href="#">Model X <img class="smallcar" src="img/modelx.png" alt=""></a>
-                <a href="#">Roadster <img class="minicar" src="img/roadster.png" alt=""></a>
-                </div>
-            </div> 
-            <a href="#">SHOP</a>
-            <a href="#">CONTACT</a>
+    <div id="bg"></div>
+    <div id="wrapper">
+        <nav class="navbar" id="navbar">
+            <img src="img/logowhite.png" id="logo" alt="tesla_logo">
+            <div class="links" id="links">
+                <a href="#" class="active">HOME
+                    <div class="borderbottom"></div>
+                </a>
+                <a href="#">ABOUT US
+                    <div class="borderbottom"></div>
+                </a>
+                <a href="#">VALUES
+                    <div class="borderbottom"></div>
+                </a>
+                <div class="dropdown">
+                    <button class="dropbtn" id="dropbtn">CAR MODELS 
+                        <i class="fas fa-chevron-circle-down"></i>
+                        <div class="borderbottom"></div>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Model S <img class="minicar" src="img/models.png" alt=""></a>
+                        <a href="#">Model 3 <img class="minicar" src="img/model3.png" alt=""></a>
+                        <a href="#">Model Y <img class="smallcar" src="img/modely.png" alt=""></a>
+                        <a href="#">Model X <img class="exception" src="img/modelx.png" alt=""></a>
+                        <a href="#">Roadster <img class="minicar" src="img/roadster.png" alt=""></a>
+                    </div>
+                </div> 
+                <a href="#">SHOP
+                    <div class="borderbottom"></div>
+                </a>
+                <a href="#">CONTACT
+                    <div class="borderbottom"></div>
+                </a>
+            </div>
+            <a href="#" id="mobiledrop"><i class="fas fa-bars"></i></a>
+        </nav>
+        <section id="landing">
+        <p class="landingtext"><span class="one">Future <span class="two"> will </span><span class="three">arrive.</span></span><br><span class="four">Soon.</span><br><span class="five">new Tesla Model 3</span></p>
+        </section>
+    </div>
+    <section class="performance">
+        <div class="speed">
+            <h1 class="perftitle">Speed</h1>
+            <i class="fas fa-tachometer-alt"></i>
+            <p class="mainperf">3.2s</p>
+            <p class="perfdesc">From 0-60 mph</p>
         </div>
-        <a href="#" id="mobiledrop"><i class="fas fa-bars"></i></a>
-    </nav>
+        <div class="range">
+            <h1 class="perftitle">Range</h1>
+            <i class="fas fa-battery-full"></i>
+            <p class="mainperf">325 miles</p>
+            <p class="perfdesc">When fully charged</p>
+        </div>
+       <div class="charging">
+            <h1 class="perftitle">Charging</h1>
+            <i class="fas fa-charging-station"></i>
+            <p class="mainperf">15min/30%</p>
+            <p class="perfdesc">Fast charging possibility</p>
+       </div>
+     <div class="security">
+        <h1 class="perftitle">Security</h1>
+        <i class="fas fa-shield-alt"></i>
+        <p class="stars mainperf">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </p>
+        <p class="perfdesc">5 stars rating</p>
+     </div>
+      
+    </section>
 	<section class="slider fade">
         <div class="image">
             <img class="img" src="img/slide1.jpg"/>
             <div class="content">
-                <h2>Speed</h2>
+                <h2>SPEED</h2>
                 <p>Roadster goes 0-60mph and has top speed of +250mph.</p> 
             </div>
         </div>
         <div class="image">
             <img class="img" src="img/slide2.jpg"/>
             <div class="content">
-                <h2>Diversity</h2>
+                <h2>DIVERSITY</h2>
                 <p>Tesla has different vehicles for different purposes.</p> 
             </div>
         </div>
         <div class="image">
-            <img class="img" src="img/slide3.jpg"/>
+            <img class="img" src="img/slide3.png"/>
             <div class="content">
-                <h2>Range</h2>
+                <h2>RANGE</h2>
                 <p>Average mile range of Tesla vehicles with full batery is 620 miles.</p> 
             </div>
          
@@ -65,17 +111,39 @@
         <div class="image">
             <img class="img" src="img/slide4.jpg"/>
             <div class="content">
-                <h2>Elegance</h2>
+                <h2>ELEGANCE</h2>
                 <p>Leather seats and large LCD adds five-star rating for interior.</p> 
             </div>
         </div>
         <div class="image">
             <img class="img" src="img/slide5.jpg"/>
             <div class="content">
-                <h2>Presentation</h2>
-                <p>Tesla's CEO Elon Musk presents first Model 3 ever.</p> 
+                <h2>PRESENTATION</h2>
+                <p>Tesla's CEO Elon Musk presents new Roadsters.</p> 
             </div>
         </div>
+    </section>
+    <h1 class="comptitle"></h1>
+    <section id="sliderwrapper" class="skewed">
+        <div class="layer bottom">
+            <div class="content-wrapper">
+                <div class="content-body">
+                    <h1>Look Sharp</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ut, ex sequi illo obcaecati eligendi non cumque adipisci eaque tenetur recusandae voluptates doloremque qui.</p>
+                </div>
+                <img src="img1.png" class="black" alt="">
+            </div>
+        </div>
+        <div class="layer top">
+            <div class="content-wrapper">
+                <div class="content-body">
+                    <h1>Stay Cool</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ut, ex sequi illo obcaecati eligendi non cumque adipisci eaque tenetur recusandae voluptates doloremque qui.</p>
+                </div>
+                <img src="img2.png" class="grey" alt="">
+            </div>
+        </div>
+        <div class="handle"></div>
     </section>
     <section id="news">
         <h1 class="sectiontitle">News:</h1>
@@ -83,18 +151,18 @@
             <div class="side1">
                 <a href="#">
                     <div class="newsimg" id="news1">
-                        <div class="ribbon ribbon-top-right"><span>NEW</span></div>
+                        <div class="ribbon ribbon-top-right"><span>NEW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
                         <h2 class="newstitle">Tesla launches Roadster in space.</h2>
                     </div>
                 </a>   
             </div>
-            <div class="main1">
+             <div class="main1">
                 <a href="#">
                     <div class="newsimg" id="news2">
                         <h2 class="newstitle">New interior design on the way.</h2>
                     </div>
                 </a>  
-            </div>
+            </div> 
         </div>
         <div class="row2">
             <div class="side2">
