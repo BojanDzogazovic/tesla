@@ -1,27 +1,36 @@
-  window.onscroll = function(){
-    let topBtn = document.getElementById("gototop");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        topBtn.style.opacity = "1";
-    } else {
-        topBtn.style.opacity = "0";
-    }
-
+//gotopbtn
+window.onscroll = function(){
+  let topBtn = document.getElementById("gototop");
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      topBtn.style.opacity = "1";
+  } else {
+      topBtn.style.opacity = "0";
+  }
 }; 
  
-//video start/loop
-let videoBg = document.getElementById("myVideo");
+//slidescreen
+let wrapper = document.getElementById("sliderwrapper");
+let topLayer = wrapper.querySelector(".top");
+let handle = wrapper.querySelector(".handle");
+let skew = 1000;
+let delta = 0; 
 
-window.onload = function(){
-  videoBg.play();
-};
+//for mouse
+wrapper.addEventListener("mousemove", (e) => {
+    delta = (e.clientX - window.innerWidth / 2) * 0.5;
+    handle.style.left = e.clientX + delta + "px";
 
-/* function loopVideo(){
-  videoBg.currentTime = 0.1; 
-  videoBg.play();
-  }
+    topLayer.style.width = e.clientX + skew + delta + "px";
+});
 
-videoBg.addEventListener('ended', loopVideo, false);
- */
+//for touch screen
+wrapper.addEventListener("ontouchmove", (e) => {
+  delta = (e.clientX - window.innerWidth / 2) * 0.5;
+  handle.style.left = e.clientX + delta + "px";
+
+  topLayer.style.width = e.clientX + skew + delta + "px";
+});
+
 
 //slick slider
 $('.fade').slick({
@@ -39,6 +48,7 @@ $('.fade').slick({
   });
 
 
+//responsive nav
 document.getElementById("mobiledrop").addEventListener("click", function(){
     let navbar = document.getElementById("navbar");
     if (navbar.className === "navbar") {

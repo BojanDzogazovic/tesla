@@ -2,7 +2,7 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
+    background: white url('./ajax-loader.gif') center center no-repeat;
 }
 
 /* Icons */
@@ -23,8 +23,8 @@
     line-height: 0;
 
     position: absolute;
-    bottom: -50px;
-
+    bottom: -40px;
+    z-index: 9999;
     display: block;
 
     width: 20px;
@@ -67,12 +67,10 @@
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 50px;
+    font-size: 2rem;
+    font-weight: bold;
     line-height: 1;
-
-    opacity: .75;
-    color: #000;
-
+    color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -192,7 +190,7 @@
     text-align: center;
 
     opacity: .25;
-    color: black;
+    color: white;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -200,5 +198,5 @@
 .slick-dots li.slick-active button:before
 {
     opacity: .75;
-    color: black;
+    color: white;
 }

@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Hind");
+@import url("https://fonts.googleapis.com/css?family=Teko");
 
-$primary: #ffffff;
-$secondary: #d60000;
+$white: #ffffff;
+$dark: #000000;
+$red: #CF0823;
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -10,20 +13,27 @@ body{
     overflow-x: hidden;
 }
 
-#myVideo {
+#bg{
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -10;
-    opacity: 0.8;
-    background-position: center;
-  }  
+    background: $dark;
+    /*opacity: 0.8; 
+    background: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
 
+#wrapper{
+    height: auto;
+}
 #navbar{
     overflow:hidden;
-    background-color: $primary;
+    background-color: transparent;
     #logo{
         padding-left:20px; 
         height: 70px;
@@ -32,38 +42,90 @@ body{
     .links{
         float:right;
         a{
+            box-sizing: border-box;
+            height: 70px;
+            /* font-weight: bold; */
             float: left;
             display: block;
-            color: $secondary;
+            color: $white;
             text-align: center;
-            padding: 25px 16px;
+            padding: 26px 14px;
             text-decoration: none;
             font-size: 18px;
-            transition:0.5s;
+            transition:0.5s ease-in-out;
+            position: relative;
+            .borderbottom{
+                position: absolute;
+                bottom: 0;
+                left:5%;
+                background-color: $white;
+                height: 3px;
+                width: 0%;
+                transition: 0.5s ease-in-out;
+            }
             &:hover{
-                background-color: $secondary;
-                color:$primary;
+               /*  background-color: $red; */
+                font-weight: bold;
+                color:$white;
+                .borderbottom{
+                    width: 90%;
+                }
             }
         }
+       
         .active{
-            background-color: $secondary;
-            color: white;
+          /*   background-color: $red; */
+            font-weight: bold;
+            color: $white;
+            .borderbottom{
+                width: 90%;
+            }
         }
         .dropdown{
             .dropdown-content{
                 a{
-                   float:none;
-                   text-align: left;
-                   padding: 16px 16px;
-                }
+                    color: $white;
+                    background: transparent;
+                    font-weight: bold;
+                    float:none;
+                    font-size: 20px;
+                    text-align: left;
+                    padding: 14px 14px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+                    &:hover{
+                        background-color: $white;
+                        color:$dark;
+                       
+                    }
+                } 
+              
              
             }
             .dropbtn{
-                transition: 0.5s;
-                padding: 25px 16px;
+                box-sizing: border-box;
+                height: 70px;
+                position: relative;
+                margin-bottom: 10px;
+                color: $white;
+                font-size: 18px;
+                transition:0.5s;
+                padding: 26px 14px;
+                .borderbottom{
+                    position: absolute;
+                    bottom: 0;
+                    left:5%;
+                    background-color: $white;
+                    height: 3px;
+                    width: 0%;
+                    transition: 0.5s ease-in-out;
+                }
                 &:hover{
-                    background-color: $secondary;
-                    color:$primary; 
+               /*      background-color: $red; */
+                    color:$white;
+                    font-weight: bold;
+                    .borderbottom{
+                        width: 90%;
+                    }
                 }
             }
         }
@@ -72,6 +134,7 @@ body{
 
   
 #mobiledrop {
+    transition: 0.5s ease-in-out;
     display: none;
     font-size: 25px;
     font-weight: bold;
@@ -84,44 +147,139 @@ body{
         font-size: 18px;    
         border: none;
         outline: none;
-        color: $secondary;
+        color: $red;
         padding: 14px 16px;
         background-color: inherit;
         font-family: inherit;
         margin: 0;
     }
-    .dropdown-content {
+     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+        transition: 1s ease;
+    } 
+}
+
+.dropdown:hover {
+    .dropdown-content {
+        display: block;
         transition: 1s ease;
     }
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-    transition: 1s ease;
+.dropdown-content{
+    a:hover{
+        img{
+            transform: scale(1.3);
+        }
+    }
 }
-
 .minicar{
-    height: 30px;
-    margin-left: 20px
+    transition: 1s ease-in-out;
+    height: 35px;
+    margin-left: 15px
 }
 
 .smallcar{
-    height: 35px;
-    margin-left: 18px;
+    transition: 1s ease-in-out;
+    height: 40px;
+    margin-left: 16px;
 }
 
+.exception{
+    transition: 1s ease-in-out;
+    height: 45px;
+    margin-left: 10px;
+}
+
+#landing{
+    background: url("../img/landing.jpg");
+    z-index:-10 !important;
+    min-width: 100%;
+    min-height: 50vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    opacity:0;
+    animation: 1.5s ease 1.5s showText;
+    animation-fill-mode: forwards; 
+    .landingtext{
+        position: absolute;
+        text-align: center;
+        top: -5%;
+        line-height: 1;
+        left: 35%;
+        color: $white;
+        font-size: 6vw;
+        font-family: "Teko", sans-serif;
+        .one{
+            opacity:0;
+            animation: 3.5s ease 3.5s showText;
+            animation-fill-mode: forwards; 
+        }
+        .two{
+            opacity:0;
+            animation: 4.5s ease 4.5s showText;
+            animation-fill-mode: forwards; 
+        };
+        .three{
+            opacity:0;
+            animation: 5.5s ease 5.5s showText;
+            animation-fill-mode: forwards; 
+        }
+        .four{
+            opacity:0;
+            animation: 7s ease 7s showText;
+            animation-fill-mode: forwards; 
+        }
+        .five{
+            opacity:0;
+            animation: 9s ease 9s showText;
+            animation-fill-mode: forwards;
+            font-size: 4vw;
+            position: relative;
+            top: 25vw; 
+        }
+    }
+}
+
+
+.performance{
+    opacity:0;
+    animation: 10s ease 10s showText;
+    animation-fill-mode: forwards;
+    padding: 60px;
+    display:flex;
+    justify-content:space-between;
+    background: $dark;
+    color: $white;
+    z-index:10000;
+    text-align: center;
+    .mainperf{
+        font-size: 2rem;
+        font-family: "Teko", sans-serif;
+        margin-bottom: 0;
+    }
+    i{
+        font-size: 3rem;
+    }
+    .fa-star{
+        font-size: 2rem;
+    }
+    .perfdesc{
+        font-weight: 100;
+    }
+}
+
+
 .slider{
+    z-index:0;
     position:relative;
     margin: auto;
-    margin-top: 100px;
-    margin-bottom:80px; 
-    width: 80%;
+    width: 100%;
 }
 
 .img{
@@ -132,19 +290,131 @@ body{
 
 .content{
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     padding-left:10px;
-    padding-right: 10px;
-    border-top-right-radius: 90px;
+    padding-right: 50px;
+    padding-bottom: 20px;
     font-weight: bold;
-    color: #000;
-    background: rgba(231, 222, 222, 0.5);
+    background:$white;
     width: auto;
+    border-top-right-radius: 100%;
+
+    h2{
+        font-family: 'Teko', sans-serif;
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    p{
+        margin-top: 0;
+        font-weight: 400;
+    }
 }
+
+
+
+#sliderwrapper{
+    position: relative;
+    width: 100%;
+    min-height: 60vw;
+    overflow: hidden;
+}
+
+.layer{
+    position: absolute;
+    width:100vw;
+    min-height: 60vw;
+    overflow: hidden;
+}
+
+.layer .content-wrapper{
+    position: absolute;
+    width:100vw;
+    min-height: 60vw;
+}
+
+.layer .content-body{
+    width:25%;
+    position: absolute;
+    top:50%;
+    text-align: center;
+    transform: translateY(-50%);
+    color:$white;
+}
+
+.black, .grey{
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.layer h1{
+    font-size: 2em;
+}
+
+.bottom{
+    background: $dark;
+    z-index: 1;
+}
+
+.bottom .content-body{
+    right: 5%; 
+}
+
+.bottom h1{
+    color: $red;
+}
+
+.top{
+    background-color: #eee;
+    color: $dark;
+    z-index: 2;
+    width: 50vw;
+}
+
+.top .content-body{
+    left:5%;
+    color:$dark;
+}
+
+.handle{
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: $red;
+    width: 5px;
+    top:0;
+    left:50%;
+    z-index: 3;
+}
+
+.skewed .handle{
+    top:50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin: top;
+}
+
+.skewed .top{
+    transform: skew(-30deg);
+    margin-left:-1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrapper{
+    transform: skew(30deg);
+    margin-left:1000px; 
+}
+
+
+
 
 #gototop{
     font-size: 45px;
-    color: rgb(110, 105, 105);
+    color: $white;
     position:fixed;
     bottom: 35px;
     right:35px;
@@ -198,7 +468,7 @@ body{
     height: 25vw;
     transition: 0.5s ease;
     &:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }
 
@@ -249,7 +519,7 @@ body{
     position: absolute;
     bottom: 0;
     text-decoration: none;
-    color:$primary;
+    color:$white;
     font-size: 18px;
     padding: 20px;
     margin: 0;
@@ -265,18 +535,21 @@ body{
     z-index: 999;
 }
 
-.ribbon span {
+.ribbon{
+     span {
     position: absolute;
     display: block;
     width: 225px;
-    padding: 15px 0;
-    background-color: #db3434;
-    box-shadow: 0 5px 10px rgba(0,0,0,.1);
-    color: #fff;
-    font: 700 18px/1 'Lato', sans-serif;
-    text-shadow: 0 1px 1px rgba(0,0,0,.2);
-    text-transform: uppercase;
+    height: 16px;
+    padding: 15px 16px;
+    background-color: $red;
+    color: $white;
+    font-size: 28px;
+    padding-bottom:30px; 
+    font-weight: bold;
+    font-family: 'Teko', sans-serif;
     text-align: center;
+    }
 }
   
 .ribbon-top-right {
@@ -285,7 +558,7 @@ body{
 }
 
 .ribbon-top-right span {
-    left: -25px;
+    left: -25px;  
     top: 30px;
     transform: rotate(45deg);
 }
@@ -293,22 +566,24 @@ body{
 
 footer{
     text-align: center;
-    color: $primary;
-    background-color: #000;
+    color: $white;
+    background-color: $dark;
     padding: 15px;
     p{
         padding: 0;
     }
 }
 
+@keyframes showText {
+    from { opacity: 0}
+    to   { opacity: 1}
+  }
+
 
 /*responsive*/
 @media(max-width: 600px){
     .content{
         font-size: 0.6em;
-    }
-    .slider{
-        width: 95%;
     }
 
     .row1, .row2{
@@ -325,6 +600,38 @@ footer{
     }
     .newstitle{
         font-size: 14px;
+    }
+
+    .performance{
+        padding:0 60px 60px 60px;
+        display:flex;
+        flex-direction: column;
+        .perfdesc{
+            padding-bottom: 20px;
+            border-bottom: 2px solid $white;
+        }
+        .mainperf{
+            font-size: 1.5rem;
+            font-family: "Teko", sans-serif;
+            margin-bottom: 0;
+        }
+        i{
+            font-size: 2.5rem;
+        }
+        .fa-star{
+            font-size: 1.5rem;
+        }
+        .perfdesc{
+            font-size: 0.8rem;
+            font-weight: 100;
+        }
+    }
+    #landing{
+        .landingtext{
+            .five{
+                font-size: 6vw;
+            }
+        }
     }
 }
 
@@ -364,12 +671,12 @@ footer{
             position: absolute;
             right: 25px;
             top: 25px;
-            color: #000;
+            color: $white;
             &:active{
-                color: black;
+                color: $white;
             }
             &:visited{
-                color: black;
+                color: $white;
             }
             }
     }
@@ -389,9 +696,6 @@ footer{
             bottom: 0;
             display: block;
             text-align: left;
-            a, div{
-                
-            }
         }
     }
 
@@ -407,3 +711,17 @@ footer{
     }
 }
 
+@media(min-width:1350px){
+    #wrapper{
+        height: 100vh;
+    }
+    #landing{
+        .landingtext{
+            .five{
+                font-size: 4vw;
+                position: relative;
+                top: 21vw; 
+            }
+        }
+    }
+}
