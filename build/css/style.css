@@ -291,78 +291,122 @@ body {
   font-weight: 400;
 }
 
-#sliderwrapper {
+.parallax {
+  background-image: url("../img/parallax.jpg");
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Teko", sans-serif;
+  text-align: center;
+}
+.parallax .comptitle {
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 80px;
+  margin: 0;
+  font-size: 3rem;
+}
+.parallax .categories {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 10px;
+  border-right: 2px solid #ffffff;
+  margin-bottom: 20px;
+}
+.parallax .categories:last-of-type {
+  border: none;
+}
+
+#slidewrapper {
   position: relative;
   width: 100%;
-  min-height: 60vw;
+  min-height: 400px;
   overflow: hidden;
 }
 
 .layer {
   position: absolute;
   width: 100vw;
-  min-height: 60vw;
+  min-height: 400px;
   overflow: hidden;
 }
 
 .layer .content-wrapper {
   position: absolute;
   width: 100vw;
-  min-height: 60vw;
+  min-height: 400px;
 }
 
 .layer .content-body {
-  width: 25%;
+  /*     width:15%;  */
   position: absolute;
-  top: 50%;
+  top: 30%;
   text-align: center;
   transform: translateY(-50%);
+  color: #ffffff;
+}
+.layer .content-body ul {
+  list-style-type: none;
+  padding: 0;
+}
+.layer .content-body ul li {
+  font-weight: bold;
+  margin: 5px;
+  font-size: 1.2rem;
   color: #ffffff;
 }
 
 .black, .grey {
   position: absolute;
-  width: 35%;
+  width: 40vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .layer h1 {
-  font-size: 2em;
+  font-size: 2.5em;
+  font-family: "Teko", sans-serif;
 }
 
 .bottom {
-  background: #000000;
+  background: #cf0823;
+  background: linear-gradient(76deg, #cf0823 11%, black 89%);
   z-index: 1;
 }
-
 .bottom .content-body {
   right: 5%;
 }
-
 .bottom h1 {
   color: #CF0823;
 }
 
 .top {
-  background-color: #eee;
-  color: #000000;
+  background: #1e278f;
+  background: linear-gradient(331deg, #1e278f 11%, #757aba 53%, white 89%);
+  color: #222;
   z-index: 2;
   width: 50vw;
 }
-
 .top .content-body {
   left: 5%;
-  color: #000000;
+  color: #222;
+}
+.top h1 {
+  color: #080862;
 }
 
 .handle {
   position: absolute;
   height: 100%;
   display: block;
-  background-color: #CF0823;
-  width: 8px;
+  background-color: #ffffff;
+  width: 1px;
   top: 0;
   left: 50%;
   z-index: 3;
@@ -402,21 +446,21 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding: 25px 60px;
+  padding: 5px;
 }
 
 .row2 {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding: 25px 60px;
+  padding: 5px;
 }
 
 .side1, .main2 {
   box-sizing: border-box;
   flex: 30%;
   background-color: transparent;
-  padding: 20px;
+  padding: 5px;
   position: relative;
 }
 
@@ -424,25 +468,39 @@ body {
   box-sizing: border-box;
   flex: 70%;
   background-color: transparent;
-  padding: 20px;
+  padding: 5px;
 }
 
 .newsimg {
   position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   height: 25vw;
-  transition: 0.5s ease;
+  /* transition: 0.5s ease; */
 }
-.newsimg:hover {
-  transform: scale(1.05);
+.newsimg:hover .newsoverlay {
+  opacity: 1;
+}
+.newsimg:hover .newstitle {
+  opacity: 1;
 }
 
 .sectiontitle {
-  margin-top: 150px;
+  color: #ffffff;
+  font-family: "Teko", sans-serif;
+  font-size: 3rem !important;
+  margin: 0;
   text-align: center;
   font-weight: bold;
   font-size: 30px;
+  letter-spacing: 1px;
+}
+.sectiontitle h1 {
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 #news1 {
@@ -481,16 +539,54 @@ body {
   z-index: 900;
 }
 
+#news5 {
+  background: url("../img/news5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 900;
+}
+
+#news6 {
+  background: url("../img/news6.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 900;
+}
+
 .newstitle {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Teko", sans-serif;
+  font-size: 2vw;
+  padding: 40px 20px 5px 5px;
+  letter-spacing: 1px;
+  margin: 0;
+  opacity: 0;
+  position: relative;
+  transition: 0.8s;
+}
+
+.newsoverlay {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  transition: 0.8s;
+  opacity: 0;
   position: absolute;
   bottom: 0;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 18px;
-  padding: 20px;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.612);
-  border-top-right-radius: 90px;
+  right: 0;
+  width: 100%;
+  background: #cf0823;
+  background: linear-gradient(57deg, #cf0823 11%, rgba(255, 255, 255, 0) 89%);
 }
 
 .ribbon {
@@ -533,6 +629,10 @@ footer {
   background-color: #000000;
   padding: 15px;
 }
+footer img {
+  margin-top: 30px;
+  height: 100px;
+}
 footer p {
   padding: 0;
 }
@@ -547,8 +647,11 @@ footer p {
 }
 /*responsive*/
 @media (max-width: 600px) {
-  .content {
-    font-size: 0.6em;
+  .content h2 {
+    font-size: 1.2rem;
+  }
+  .content p {
+    font-size: 0.6rem;
   }
 
   .row1, .row2 {
@@ -557,17 +660,17 @@ footer p {
   }
 
   .side1, .side2, .main1, .main2 {
-    width: 80% !important;
-    margin: 0 10% 20px 10% !important;
+    width: 90% !important;
+    margin: 0 5% 20px 5% !important;
   }
 
   .newsimg {
-    height: 40vw !important;
+    height: 45vw !important;
     width: 100%;
   }
 
   .newstitle {
-    font-size: 14px;
+    font-size: 4vw !important;
   }
 
   .performance {
@@ -607,14 +710,17 @@ footer p {
   }
 
   .side1, .side2, .main1, .main2 {
-    width: 70%;
+    width: 90%;
     margin: auto;
     margin-bottom: 20px;
   }
 
   .newsimg {
-    height: 35vw;
+    height: 40vw;
     width: 100%;
+  }
+  .newsimg .newstitle {
+    font-size: 3vw;
   }
 }
 @media (max-width: 1000px) {
@@ -677,6 +783,22 @@ footer p {
     display: block;
     width: 100%;
     text-align: center;
+  }
+
+  .black, .grey {
+    position: absolute;
+    width: 60vw;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .top .content-body {
+    left: 0%;
+  }
+
+  .bottom .content-body {
+    right: 0;
   }
 }
 @media (min-width: 1350px) {
