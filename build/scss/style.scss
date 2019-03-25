@@ -31,6 +31,7 @@ body{
 #wrapper{
     height: auto;
 }
+
 #navbar{
     overflow:hidden;
     background-color: transparent;
@@ -198,7 +199,7 @@ body{
     background: url("../img/landing.jpg");
     z-index:-10 !important;
     min-width: 100%;
-    min-height: 50vw;
+    min-height: 50vw; 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -325,7 +326,7 @@ body{
         letter-spacing: 1px;
         color: $white;
         text-align: center;
-        padding-top:80px;
+        padding-top:100px;
         margin: 0;
         font-size: 3rem;
     }
@@ -526,6 +527,7 @@ body{
         margin: 0;
         padding-top:100px; 
         padding-bottom:50px;
+        font-size: 4rem;
     }
     color: $white;
     font-family: "Teko", sans-serif;
@@ -533,7 +535,7 @@ body{
     margin: 0;
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    
     letter-spacing: 1px;
 }
 
@@ -680,6 +682,23 @@ footer{
 
 
 /*responsive*/
+@media(max-width: 400px){
+    #landing{
+        .landingtext{
+            position: absolute;
+            top: 15%;
+            left: 25% !important;
+            font-size: 10vw !important;
+            .five{
+                font-size: 9vw !important;
+                position: relative;
+                top: 45vh; 
+            }
+        }
+    }
+}
+
+
 @media(max-width: 600px){
     .content{
         h2{
@@ -731,13 +750,27 @@ footer{
         }
     }
     #landing{
+        min-width: 100%;
+        min-height: 100vh; 
+        background-repeat: no-repeat;
+        background-size: contain;
         .landingtext{
+            position: absolute;
+            top: 15%;
+            left: 30%;
+            font-size: 8vw;
             .five{
-                font-size: 6vw;
+                font-size: 7vw;
+                position: relative;
+                top: 45vh; 
             }
         }
     }
-
+    .sectiontitle{
+        h1{
+            font-size: 3rem;
+        }
+    }
 }
 
 @media(max-width: 900px){
